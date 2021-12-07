@@ -1,10 +1,11 @@
 import React from "react"
+import Button from '@mui/material/Button';
 
 function App() {
   return (
-    <div >
-      <h1>Pulse Media Homepage</h1>
-    </div>
+    
+      <Button variant="contained">Hello World</Button>
+    
   );
 }
 
