@@ -1,11 +1,10 @@
 import React from "react"
-import Button from '@mui/material/Button';
+import Navbar from "./Header_Footer/Header"
 
 function App() {
   return (
-    
-      <Button variant="contained">Hello World</Button>
-    
+      // <Button variant="contained">Hello World</Button>
+      <Navbar />
   );
 }
 
