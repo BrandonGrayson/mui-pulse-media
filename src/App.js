@@ -8,7 +8,14 @@ import "./App.css"
 
 function App() {
   return (
+    <Box
+     sx={{
+       bgcolor: "primary.main",
+       height: "100vh"
+     }}>
       <h1>Hello</h1>
+    </Box>
+
   );
 }
 
