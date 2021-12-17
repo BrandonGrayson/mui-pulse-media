@@ -13,9 +13,9 @@ function App() {
        bgcolor: "primary.main",
        height: "100vh"
      }}>
+       <Navbar />
       <h1>Hello</h1>
     </Box>
-
   );
 }
 
