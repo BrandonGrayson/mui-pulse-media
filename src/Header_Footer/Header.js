@@ -4,7 +4,11 @@ import {Box, Typography} from '@mui/material';
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Box>
+      <Box
+       sx={{
+         color: "primary.secondary",
+         ml: "5%"
+        }}>
         <Typography>Pulse Media</Typography>
       </Box>
     </Box>
