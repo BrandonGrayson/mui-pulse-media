@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from "./Header_Footer/Header"
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import "./App.css"
 
 
@@ -14,7 +14,16 @@ function App() {
        height: "100vh"
      }}>
        <Navbar />
-      <h1>Hello</h1>
+       <Box sx={{
+         display: 'flex',
+         justifyContent: 'center',
+         bgcolor: 'red',
+         height: 'inherit',
+         alignItems: 'center'
+       }}>
+       <Typography>Hello</Typography>
+       </Box>
+      
     </Box>
   );
 }
