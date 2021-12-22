@@ -3,9 +3,6 @@ import Navbar from "./Header_Footer/Header"
 import { Box, Typography } from '@mui/material';
 import "./App.css"
 
-
-
-
 function App() {
   return (
     <Box
@@ -16,14 +13,18 @@ function App() {
        <Navbar />
        <Box sx={{
          display: 'flex',
-         justifyContent: 'center',
-         bgcolor: 'red',
          height: 'inherit',
-         alignItems: 'center'
+         flexDirection: 'column',
+         alignItems: 'center',
+         mt: '10%'
        }}>
-       <Typography>Hello</Typography>
+       <Typography
+        >Stimulate Growth... 
+        </Typography>
+        <Typography >
+          By leveraging your online resources.
+        </Typography>
        </Box>
-      
     </Box>
   );
 }
