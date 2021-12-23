@@ -3,17 +3,21 @@ export default function Home() {
     return (
         <Box sx={{
             display: 'flex',
-            height: 'inherit',
+            height: '100%',
             flexDirection: 'column',
             alignItems: 'center',
-            mt: '10%'
-          }}>
-          <Typography
-           >Stimulate Growth... 
+            mt: '10%',
+            color: "primary.secondary"
+        }}>
+            <Typography
+                variant="h2"
+            >Engineered
            </Typography>
-           <Typography >
-             By leveraging your online resources.
+            <Typography
+                variant="h4"
+                pt="2%">
+                To Grow Your Business
            </Typography>
-          </Box>
+        </Box>
     )
 }

@@ -9,7 +9,7 @@ function App() {
     <Box
      sx={{
        bgcolor: "primary.main",
-       height: "100vh"
+       minHeight: '100vh'
      }}>
        <Navbar />
       <Home />
