@@ -1,7 +1,8 @@
 import React from "react"
 import Navbar from "./Header_Footer/Header"
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import "./App.css"
+import Home from './Home'
 
 function App() {
   return (
@@ -11,20 +12,7 @@ function App() {
        height: "100vh"
      }}>
        <Navbar />
-       <Box sx={{
-         display: 'flex',
-         height: 'inherit',
-         flexDirection: 'column',
-         alignItems: 'center',
-         mt: '10%'
-       }}>
-       <Typography
-        >Stimulate Growth... 
-        </Typography>
-        <Typography >
-          By leveraging your online resources.
-        </Typography>
-       </Box>
+      <Home />
     </Box>
   );
 }
