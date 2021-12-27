@@ -18,6 +18,14 @@ export default function Home() {
                 pt="2%">
                 To Grow Your Business
            </Typography>
+
+
+        <Box>
+        <Typography>
+               "Pulse": A method of collecting customer Data, Engaging clients, and showcasing customer experiences. 
+           </Typography>
+        </Box>
+
         </Box>
     )
 }
