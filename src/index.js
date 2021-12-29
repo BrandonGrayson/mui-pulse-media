@@ -12,7 +12,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#2F303A",
-      secondary: '#FFFFFF2'
+      secondary: '#FFFFFF'
     }
   }
 })
@@ -21,13 +21,14 @@ const theme = createTheme({
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
