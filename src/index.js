@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@mui/material/styles"
 import { createTheme } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Home'
 
 const theme = createTheme({
   palette: {
     primary: {
       main: "#2F303A",
-      secondary: '#FFFFFF'
+      secondary: '#FFFFFF2'
     }
   }
 })
@@ -18,10 +20,14 @@ const theme = createTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
