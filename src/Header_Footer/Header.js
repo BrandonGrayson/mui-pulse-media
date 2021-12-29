@@ -7,7 +7,8 @@ export default function Navbar() {
       <Box
        sx={{
          color: "primary.secondary",
-         ml: "5%"
+         pl: "5%",
+         pt: " 2%",
         }}>
         <Typography>Pulse Media</Typography>
       </Box>

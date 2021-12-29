@@ -27,7 +27,7 @@ export default function Home() {
                      sx={{
                          pt: '2%'
                      }}>
-                        <Typography>"Pulse": A method for collecting customer data, engaging clients, and increasing referrals</Typography>
+                        <Typography>"Pulse": A method of collecting customer data, engaging clients, and increasing referrals</Typography>
                     </Box>
 
 
