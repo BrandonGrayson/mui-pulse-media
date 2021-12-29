@@ -1,31 +1,38 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 export default function Home() {
     return (
-        <Box sx={{
-            display: 'flex',
-            height: '100%',
-            flexDirection: 'column',
-            alignItems: 'center',
-            mt: '10%',
-            color: "primary.secondary"
-        }}>
-            <Typography
-                variant="h2"
-            >Engineered
-           </Typography>
-            <Typography
-                variant="h4"
-                pt="2%">
-                To Grow Your Business
-           </Typography>
+        <Grid container spacing={2}>
+            <Grid item xs={12}>
+                <Box sx={{
+                    display: 'flex',
+                    height: '90vh',
+                    width: '100vw',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    color: "primary.secondary",
+                    mt: '10vh'
+                }}>
+                    <Typography
+                        variant="h2"
+                     >Engineered
+                    </Typography>
+                    <Box>
+                    <Typography
+                        variant="h4"
+                        pt="2%">
+                        To Grow Your Business
+                    </Typography>
+                    </Box>
+                    <Box
+                     sx={{
+                         pt: '2%'
+                     }}>
+                        <Typography>"Pulse": A method for collecting customer data, engaging clients, and increasing referrals</Typography>
+                    </Box>
 
 
-        <Box>
-        <Typography>
-               "Pulse": A method of collecting customer Data, Engaging clients, and showcasing customer experiences. 
-           </Typography>
-        </Box>
-
-        </Box>
+                </Box>
+            </Grid>
+        </Grid>
     )
 }
