@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, Button } from '@mui/material';
 export default function Home() {
     return (
         <Grid container spacing={2}>
@@ -29,7 +29,7 @@ export default function Home() {
                      }}>
                         <Typography>"Pulse": A method of collecting customer data, engaging clients, and increasing referrals</Typography>
                     </Box>
-
+                     <Button color="success" variant="contained">Pulse Check</Button>
 
                 </Box>
             </Grid>
