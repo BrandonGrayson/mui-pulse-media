@@ -13,8 +13,6 @@ function App() {
        minHeight: '100vh'
      }}>
        <Navbar />
-      <Home />
-
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
