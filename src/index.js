@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@mui/material/styles"
 import { createTheme } from '@mui/material/styles';
 import { BrowserRouter } from "react-router-dom";
-import Home from './Home'
 
 const theme = createTheme({
   palette: {
