@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@mui/material/styles"
 import { createTheme } from '@mui/material/styles';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Home from './Home'
 
 const theme = createTheme({
@@ -23,10 +23,7 @@ ReactDOM.render(
     <BrowserRouter>
     <ThemeProvider theme={theme}>
         <App />
-      </ThemeProvider>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-      </Routes>
+    </ThemeProvider>
     </BrowserRouter>
 
   </React.StrictMode>,

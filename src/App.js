@@ -3,6 +3,7 @@ import Navbar from "./Header_Footer/Header"
 import { Box } from '@mui/material';
 import "./App.css"
 import Home from './Home'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
      }}>
        <Navbar />
       <Home />
+
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
     </Box>
   );
 }
