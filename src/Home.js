@@ -5,21 +5,20 @@ export default function Home() {
             <Grid item xs={12}>
                 <Box sx={{
                     display: 'flex',
-                    height: '90vh',
-                    width: '100vw',
                     flexDirection: 'column',
                     alignItems: 'center',
                     color: "primary.secondary",
-                    mt: '10vh'
+                    mt: '15vh',
                 }}>
                     <Typography
                         variant="h2"
+                        width="bold"
                      >Engineered
                     </Typography>
                     <Box>
                     <Typography
                         variant="h4"
-                        pt="2%">
+                        pt="3%">
                         To Grow Your Business
                     </Typography>
                     </Box>
@@ -27,10 +26,12 @@ export default function Home() {
                      sx={{
                          pt: '2%'
                      }}>
-                        <Typography>"Pulse": A method of collecting customer data, engaging clients, and increasing referrals</Typography>
+                        <Typography>"Pulse": A business model designed to create opportunities for referrals to happen.</Typography>
                     </Box>
-                     <Button color="success" variant="contained">Pulse Check</Button>
-
+                    <Box
+                     mt='2%'>
+                    <Button color="success" variant="contained">Pulse Check</Button>
+                    </Box>
                 </Box>
             </Grid>
         </Grid>

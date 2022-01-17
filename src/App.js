@@ -10,7 +10,7 @@ function App() {
     <Box
      sx={{
        bgcolor: "primary.main",
-       minHeight: '100vh'
+       height: '100vh'
      }}>
        <Navbar />
       <Routes>
