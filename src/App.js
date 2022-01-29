@@ -13,7 +13,6 @@ function App() {
        height: '100vh'
      }}>
        <Navbar />
-       <Home />
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
