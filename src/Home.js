@@ -13,20 +13,14 @@ export default function Home() {
                     <Typography
                         variant="h2"
                         width="bold"
-                     >Engineered
+                     >We Are Pulse Media
                     </Typography>
                     <Box>
                     <Typography
                         variant="h4"
                         pt="3%">
-                        To Grow Your Business
+                        A system designed to track customer data and generate referrals 
                     </Typography>
-                    </Box>
-                    <Box
-                     sx={{
-                         pt: '2%'
-                     }}>
-                        <Typography>"Pulse": A business model designed to create opportunities for referrals to happen.</Typography>
                     </Box>
                     <Box
                      mt='2%'>
