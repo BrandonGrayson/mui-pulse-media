@@ -12,6 +12,12 @@ const theme = createTheme({
     primary: {
       main: "#2F303A",
       secondary: '#FFFFFF'
+    },
+    pulse: {
+      main: '#581b98',
+      secondary : "#9c1de7",
+      Contrast: '#f3558e',
+      secondaryContrast: '#faee1c'
     }
   },
   typography: {
