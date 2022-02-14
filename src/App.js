@@ -9,7 +9,7 @@ function App() {
   return (
     <Box
      sx={{
-       bgcolor: "primary.main",
+       bgcolor: "pulse.background",
        height: '100vh'
      }}>
        <Navbar />

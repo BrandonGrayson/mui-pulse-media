@@ -14,10 +14,14 @@ const theme = createTheme({
       secondary: '#FFFFFF'
     },
     pulse: {
-      main: '#581b98',
-      secondary : "#9c1de7",
-      Contrast: '#f3558e',
-      secondaryContrast: '#faee1c'
+      background: '#FFFCFA',
+      subtitleText : "#CFD6E0",
+      actionButton: '#FF4F67',
+      secondaryContrast: '#faee1c',
+      circularText: '#E9E6FF',
+      headerText: '#24307D',
+      buttontext: '#FFFFFF'
+
     }
   },
   typography: {
