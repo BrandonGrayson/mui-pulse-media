@@ -20,7 +20,8 @@ const theme = createTheme({
       secondaryContrast: '#faee1c',
       circularText: '#E9E6FF',
       headerText: '#24307D',
-      buttontext: '#FFFFFF'
+      buttontext: '#FFFFFF',
+      navBar: '#6E7EE0'
 
     }
   },
