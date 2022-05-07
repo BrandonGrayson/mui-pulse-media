@@ -2,7 +2,7 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 export default function Home() {
     return (
         <Grid container>
-            <Grid item xs={12} display='flex' flexDirection='column' justifyContent="center" minHeight='70%'
+            <Grid item xs={10} display='flex' flexDirection='column' justifyContent="center" minHeight='70%' mt="15%"
                 alignItems="center">
                 {/* <Box sx={{
                     display: 'flex',
