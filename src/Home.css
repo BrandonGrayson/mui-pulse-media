@@ -1,7 +1,7 @@
-.header {
-    font-size: 150px !important;
+#header {
+    font-size: 100px !important;
 }
 
-.subHeader {
-    font-size: 120px !important;
+#subHeader {
+    font-size: 70px;
 }
