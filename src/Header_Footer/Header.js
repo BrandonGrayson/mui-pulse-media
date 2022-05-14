@@ -1,9 +1,13 @@
 import * as React from 'react';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
-import { Box, Typography } from '@mui/material';
+import { Divider } from '@mui/material';
 
 export default function Navbar() {
   return (
-    <MonitorHeartIcon className='nav-icon' />
+    <>
+      <MonitorHeartIcon color='primary' fontSize="large" className='nav-icon' sx={{ marginLeft: '10vw' }} />
+      <Divider />
+    </>
+
   );
 }

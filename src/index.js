@@ -10,18 +10,20 @@ import { BrowserRouter } from "react-router-dom";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2F303A",
-      secondary: '#FFFFFF'
+      main: '#D91E36',
     },
     pulse: {
       background: '#FFFCFA',
-      subtitleText : "#CFD6E0",
+      subtitleText: "#CFD6E0",
       actionButton: '#FF4F67',
       secondaryContrast: '#faee1c',
       circularText: '#E9E6FF',
       headerText: '#24307D',
       buttontext: '#FFFFFF',
-      navBar: '#6E7EE0'
+      navBar: '#6E7EE0',
+      crimson: '#D91E36',
+      Amaranth: '#DA344D',
+      fieryRose: '#EC5766'
 
     }
   },
@@ -33,9 +35,9 @@ const theme = createTheme({
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <App />
-    </ThemeProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
