@@ -1,48 +1,42 @@
 import { Box, Typography, Grid, Button } from '@mui/material';
+import React from 'react';
+import "./Home.css"
+
 export default function Home() {
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={6}>
-                <Box sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    ml: '15%',
-                    mt: '20%'
-                }}>
+        <>
+            <Grid container spacing={2} id="container">
+                {/* <Grid item xs={6}> */}
+                <Grid item xs={12} md={8} lg={7}>
+
                     <Typography
                         variant="h2"
                         width="bold"
                         color="pulse.headerText"
-                     >We Are Pulse Media
+                        className='header'
+                    >Engineered To
                     </Typography>
-                    <Box>
+
                     <Typography
                         variant="h4"
                         pt="3%"
-                        color="pulse.subtitleText">
-                        A system designed to track customer data and generate referrals 
+                        color="pulse.subtitleText"
+                        className="sub-header">
+                        Generate Referrals
                     </Typography>
-                    </Box>
+                </Grid>
+                {/* <Grid item xs={4}> */}
+                <Grid item xs={12} md={4} lg={4}>
                     <Box
-                     mt='2%'>
-                    <Button color='success' variant="contained">
-                        <Typography color="pulse.buttonText">Pulse Check</Typography>
-                    </Button>
-                    </Box>
-                </Box>
-
-            </Grid>
-            <Grid item xs={4}>
-                    <Box
-                    component='img'
-                    alt="Pulse Media Hero"
-                    src="img/pulseHeroImg.png"
-                    sx={{
-                        mt: '10%'
-                    }}>
+                        component='img'
+                        alt="Pulse Media Hero"
+                        src="img/pulseHeroImg.png"
+                        className="hero-img"
+                    >
                     </Box>
                 </Grid>
-        </Grid>
+            </Grid>
+        </>
+
     )
 }
