@@ -7,17 +7,14 @@ import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <Box
-      sx={{
-        bgcolor: "pulse.background",
-        height: '100%',
-        width: "100%"
-      }}>
+    <>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
-    </Box>
+    </>
+
+
 
   );
 }
