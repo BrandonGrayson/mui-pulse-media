@@ -7,11 +7,10 @@ export default function Navbar() {
     <Box
       sx={{
         color: "primary.secondary",
-        border: '1px solid red',
         height: '8vh',
         backgroundColor: '#6E7EE0',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
       }}
       pt={1.5}
     >

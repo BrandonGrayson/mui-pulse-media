@@ -8,7 +8,6 @@ export default function Home() {
             <Grid container spacing={2} id="container">
                 {/* <Grid item xs={6}> */}
                 <Grid item xs={12} md={8} lg={7}>
-
                     <Typography
                         variant="h2"
                         width="bold"
@@ -26,7 +25,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
                 {/* <Grid item xs={4}> */}
-                <Grid item xs={12} md={4} lg={4}>
+                <Grid item xs={12} md={4} lg={4} className="hero-grid">
                     <Box
                         component='img'
                         alt="Pulse Media Hero"
