@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import React from 'react';
 import "./Home.css"
 
@@ -6,8 +6,7 @@ export default function Home() {
     return (
         <>
             <Grid container spacing={2} id="container">
-                {/* <Grid item xs={6}> */}
-                <Grid item xs={12} md={8} lg={7}>
+                <Grid item xs={12} md={8} lg={7} sx={{ marginLeft: "5vw" }}>
                     <Typography
 
                         width="bold"
@@ -24,8 +23,7 @@ export default function Home() {
                         generate referrals
                     </Typography>
                 </Grid>
-                {/* <Grid item xs={4}> */}
-                <Grid item xs={12} md={4} lg={4} className="hero-grid">
+                <Grid item xs={12} md={4} lg={4} sx={{ marginLeft: "5vw" }} className="hero-grid">
                     <Box
                         component='img'
                         alt="Pulse Media Hero"

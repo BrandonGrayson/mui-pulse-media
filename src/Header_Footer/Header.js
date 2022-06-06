@@ -14,7 +14,7 @@ export default function Navbar() {
       }}
       pt={1.5}
     >
-      <MonitorHeartIcon color='primary' fontSize="large" className='nav-icon' sx={{ marginLeft: '10vw' }} />
+      <MonitorHeartIcon color='primary' fontSize="large" className='nav-icon' sx={{ marginLeft: '5vw' }} />
       <Typography pl={1} fontSize='x-large'>Pulse Media</Typography>
     </Box >
   );
