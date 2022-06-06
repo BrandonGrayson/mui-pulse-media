@@ -35,5 +35,10 @@
         font-size: 38px;
         line-height: 48px;
     }
+
+    #about {
+        font-size: 18px;
+        line-height: 32px;
+    }
     
 }
