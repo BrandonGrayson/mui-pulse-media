@@ -9,19 +9,19 @@ export default function Home() {
                 {/* <Grid item xs={6}> */}
                 <Grid item xs={12} md={8} lg={7}>
                     <Typography
-                        variant="h2"
+
                         width="bold"
                         color="pulse.headerText"
-                        className='header'
-                    >Engineered To
+                        id='header'
+                    >Designed to
                     </Typography>
 
                     <Typography
                         variant="h4"
                         pt="3%"
                         color="pulse.subtitleText"
-                        className="sub-header">
-                        Generate Referrals
+                        id="sub-header">
+                        generate referrals
                     </Typography>
                 </Grid>
                 {/* <Grid item xs={4}> */}

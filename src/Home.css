@@ -20,9 +20,20 @@
         display: flex; 
         flex-direction: column-reverse;
     }
+
     .hero-img {
         width: 100%;
         max-width: 480px;
+    }
+
+    #header {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    #sub-header {
+        font-size: 38px;
+        line-height: 48px;
     }
     
 }
