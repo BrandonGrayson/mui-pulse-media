@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
 body {
@@ -5,6 +9,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: 1px solid red;
+  background-color: #FFFCFA;
+  display: block;
 }
 
 code {
@@ -12,10 +18,15 @@ code {
     monospace;
 }
 
+html, 
 body {
+    height: 100%;
+}
+
+/* body {
   height: 100vh;
   background-color: #FFFCFA;
-}
+} */
 
 /* *, *::before, *::after {
   box-sizing: inherit;
