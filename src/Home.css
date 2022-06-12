@@ -27,7 +27,6 @@
 
 }
 
-
 @media (max-width: 480px) {
     #container {
         display: flex; 
@@ -57,6 +56,14 @@
     #about {
         font-size: 18px;
         line-height: 32px;
-        margin-top: 5px
+    }
+
+    .bar {
+        width: 6px;
+        background-color: #24307D;
+        height: 104px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10px;
     }
 }
