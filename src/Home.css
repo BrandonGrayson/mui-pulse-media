@@ -16,13 +16,22 @@
     }
 
     .hero-img {
-        border: 1px solid red;
         width: 600px;
+        width: 480px;
         max-height: 420px;
     }
 
     .about {
         margin-top: 20px;
+    }
+
+    .bar {
+        width: 6px;
+        background-color: #24307D;
+        height: 104px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10px;
     }
 
 }
@@ -39,9 +48,9 @@
         width: 300px;
     }
 
-    .hero-grid {
+    /* .hero-grid {
         width: 100%;
-    }
+    } */
 
     #header {
         font-size: 38px;

@@ -1,7 +1,7 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
 body {
@@ -10,7 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   border: 1px solid red;
   background-color: #FFFCFA;
-  display: block;
 }
 
 code {
@@ -18,28 +17,19 @@ code {
     monospace;
 }
 
+/* html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
 html, 
 body {
-    height: 100%;
-    width: 100%;
-}
-
-/* body {
-  height: 100vh;
-  background-color: #FFFCFA;
+  max-width: 100%;
+  overflow-x: hidden;
 } */
-
-/* *, *::before, *::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-html body {
-  padding: 0;
-  margin: 0;
-} */
-
  /* this makes sure the padding and the border is included in the box sizing */
