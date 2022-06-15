@@ -8,6 +8,15 @@ import { createTheme } from '@mui/material/styles';
 import { BrowserRouter } from "react-router-dom";
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 990,
+      lg: 1200,
+      xl: 1536
+    }
+  },
   palette: {
     primary: {
       main: "#2F303A",
@@ -15,7 +24,7 @@ const theme = createTheme({
     },
     pulse: {
       background: '#FFFCFA',
-      subtitleText : "#CFD6E0",
+      subtitleText: "#CFD6E0",
       actionButton: '#FF4F67',
       secondaryContrast: '#faee1c',
       circularText: '#E9E6FF',
@@ -33,9 +42,9 @@ const theme = createTheme({
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <App />
-    </ThemeProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

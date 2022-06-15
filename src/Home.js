@@ -40,11 +40,11 @@ export default function Home() {
 
             </Grid>
             <Grid container mt={5}>
-                <Grid item xs={12} display='flex' flexDirection="row">
+                <Grid item xs={12} sm={8} display='flex' flexDirection="row">
                     <Box className="bar"></Box>
-                    <Typography id="about" sx={{ marginRight: '5vw' }}>
+                    <Typography id="about" sx={{ marginRight: '5vw', display: 'flex', alignItems: 'center' }}>
                         Pulse Media is a branding agency based in Mt Laurel, NJ.
-                        We help home remodeling companies generate referrals by promoting their brand online.
+                        We help home remodeling companies generate referrals through online brand promotion.
                     </Typography>
                 </Grid>
             </Grid>
