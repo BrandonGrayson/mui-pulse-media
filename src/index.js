@@ -12,8 +12,8 @@ const theme = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 990,
-      lg: 1200,
+      md: 999,
+      lg: 1000,
       xl: 1536
     }
   },
@@ -31,7 +31,6 @@ const theme = createTheme({
       headerText: '#24307D',
       buttontext: '#FFFFFF',
       navBar: '#6E7EE0'
-
     }
   },
   typography: {

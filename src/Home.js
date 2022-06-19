@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <Grid container spacing={2} id="container">
-                <Grid item xs={12} md={12} lg={7} sx={{ marginLeft: "5vw" }}>
+                <Grid item xs={12} md={12} lg={3} sx={{ marginLeft: "5vw" }} id="title">
                     <Typography
                         variant="h2"
                         width="bold"
@@ -26,7 +26,7 @@ export default function Home() {
 
                 <Grid
                     item
-                    xs={12} md={12} lg={4}
+                    xs={12} md={12} lg={6}
                     sx={{ display: 'flex', justifyContent: 'center' }}
                     className="hero-grid">
                     <Box
