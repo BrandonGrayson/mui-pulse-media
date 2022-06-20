@@ -117,8 +117,11 @@
         margin-right: 5vw;
         margin-top: 10px;
     }
-}
 
-@media (max-width: 1250px) {
+    .right-bar {
+        width: 40px;
+        background-color: #24307D;
+        height: 4px;
+    }
 
 }
