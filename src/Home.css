@@ -124,4 +124,17 @@
         height: 4px;
     }
 
+    #photo {
+        font-size: 60px;
+        margin-left: 10px;
+    }
+
+    #services {
+        margin-left: 80px
+    }
+
+    #social {
+        font-size: 60px;
+        margin-left: 10px;
+    }
 }

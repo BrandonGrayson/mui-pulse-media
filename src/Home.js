@@ -48,12 +48,15 @@ export default function Home() {
             </Grid>
 
 
-            <Grid item xs={12} mt={3} display='flex' justifyContent='center'>
-
+            {/* <Grid item xs={12} mt={3} display='flex' justifyContent='center'>
                 <Typography>
                     What We Do
                 </Typography>
             </Grid>
+            <Grid item xs={12} display="flex" justifyContent='center'>
+                <Box className='right-bar'></Box>
+            </Grid> */}
+
 
         </>
 
