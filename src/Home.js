@@ -1,6 +1,7 @@
 import { Box, Typography, Grid } from '@mui/material';
 import React from 'react';
 import "./Home.css"
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 export default function Home() {
     return (
@@ -47,17 +48,26 @@ export default function Home() {
                 </Typography>
             </Grid>
 
-
-            {/* <Grid item xs={12} mt={3} display='flex' justifyContent='center'>
-                <Typography>
+            <Grid item xs={12} mt={3} display='flex' justifyContent='center'>
+                <Typography id="what">
                     What We Do
                 </Typography>
             </Grid>
-            <Grid item xs={12} display="flex" justifyContent='center'>
-                <Box className='right-bar'></Box>
-            </Grid> */}
-
-
+            <Grid item xs={12}>
+                <Box className='photo' sx={{ backgroundColor: '#FF4F67', }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+                        <PhotoCameraIcon id="camera-icon" />
+                        <Typography id='photo-text'>
+                            Photography
+                        </Typography>
+                    </Box>
+                    <Box className="photo-sub-text-box">
+                        <Typography id="sub-text">
+                            - Get the content needed to stay active on social media.
+                        </Typography>
+                    </Box>
+                </Box>
+            </Grid>
         </>
 
     )

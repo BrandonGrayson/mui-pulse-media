@@ -21,6 +21,41 @@
     margin-top: 10px;
 }
 
+.photo {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#photo-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+}
+
+#camera-icon {
+    font-size: 40px;
+    margin-right: 5px;
+   margin-top: 20px;
+   color: white;
+}
+
+#sub-text {
+    font-size: 28px;
+    color: white;
+}
+
+.photo-sub-text-box {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+#what {
+    font-size: 32px;
+    font-weight: 700px !important;
+}
 @media (max-width: 1250px) {
     #header {
         font-size: 38px;
@@ -124,9 +159,19 @@
         height: 4px;
     }
 
-    #photo {
-        font-size: 60px;
-        margin-left: 10px;
+    .photo {
+        width: 360px;
+        height: 300px;
+        border: 1px solid red;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #photo-text {
+        font-size: 40px;
+        font-weight: 700;
+        color: white;
+        margin-top: 10px;
     }
 
     #services {
@@ -136,5 +181,29 @@
     #social {
         font-size: 60px;
         margin-left: 10px;
+    }
+
+    #camera-icon {
+        font-size: 40px;
+        margin-right: 5px;
+       margin-top: 20px;
+       color: white;
+    }
+    
+    .photo-sub-text-box {
+        margin-top: 40px;
+        font-size: 28px;
+        max-width: 330px;
+        margin-left: 20px;
+    }
+
+    #sub-text {
+        font-size: 28px;
+        color: white;
+    }
+
+    #what {
+        font-size: 32px;
+        font-weight: 700px !important;
     }
 }
