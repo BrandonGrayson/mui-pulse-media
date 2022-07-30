@@ -5,6 +5,8 @@
 @media (max-width: 480px) {
     .navbar {
         height: 50px;
+        width: 100%;
+        overflow: none;
     }
 }
 

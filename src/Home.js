@@ -1,13 +1,12 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent, CardHeader } from '@mui/material';
 import React from 'react';
 import "./Home.css"
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 export default function Home() {
     return (
-        <>
+        <Box id="top" sx={{ overflow: 'none' }}>
             <Grid container spacing={2} id="container">
-                <Grid item xs={12} md={12} lg={3} sx={{ marginLeft: "15vw" }} id="title">
+                <Grid item xs={10} md={12} lg={3} sx={{ paddingLeft: "15vw" }} id="title">
                     <Typography
                         variant="h2"
                         width="bold"
@@ -27,20 +26,24 @@ export default function Home() {
 
                 <Grid
                     item
-                    xs={12} md={12} lg={6}
-                    sx={{ display: 'flex', justifyContent: 'center' }}
-                    className="hero-grid">
-                    <Box
-                        component='img'
-                        alt="Pulse Media Hero"
-                        src="img/pulseHeroImg.png"
-                        className="hero-img"
-                    >
+                    xs={10} md={10} lg={6}
+                    sx={{ display: 'flex', justifyContent: 'center', overflow: 'none', position: 'relative' }}
+                >
+                    <Box sx={{ display: 'block' }}>
+                        <Box
+                            component='img'
+                            alt="Pulse Media Hero"
+                            src="img/pulseHeroImg.png"
+                            className="hero-img"
+                        />
                     </Box>
+
+
+
                 </Grid>
             </Grid>
 
-            <Grid item xs={12} sm={8} display='flex' flexDirection="row" mt={5}>
+            {/* <Grid item xs={12} sm={8} display='flex' flexDirection="row" mt={5} className="about-box">
                 <Box className="bar"></Box>
                 <Typography id="about" sx={{ marginRight: '5vw', display: 'flex', alignItems: 'center' }}>
                     Pulse Media is a branding agency based in Mt Laurel, NJ.
@@ -52,23 +55,35 @@ export default function Home() {
                 <Typography id="what">
                     What We Do
                 </Typography>
-            </Grid>
-            <Grid item xs={12}>
-                <Box className='photo' sx={{ backgroundColor: '#FF4F67', }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-                        <PhotoCameraIcon id="camera-icon" />
-                        <Typography id='photo-text'>
-                            Photography
-                        </Typography>
-                    </Box>
-                    <Box className="photo-sub-text-box">
-                        <Typography id="sub-text">
-                            - Get the content needed to stay active on social media.
-                        </Typography>
-                    </Box>
-                </Box>
-            </Grid>
-        </>
+            </Grid> */}
+            {/* <Grid container >
+                <Grid item xs={12} md={4} className="card-group" >
+                    <Card className="card">
+                        <CardHeader title="Google Reviews" />
+                        <CardContent>
+                            <Typography>Generate Consistent Reviews </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} md={4} className="card-group" >
+                    <Card className="card">
+                        <CardHeader title="Google Reviews" />
+                        <CardContent>
+                            <Typography>Generate Consistent Reviews </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} md={4} className="card-group" >
+                    <Card className="card">
+                        <CardHeader title="Google Reviews" />
+                        <CardContent>
+                            <Typography>Generate Consistent Reviews </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid> */}
+
+        </Box>
 
     )
 }
