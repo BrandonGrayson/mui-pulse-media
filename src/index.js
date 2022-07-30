@@ -36,18 +36,6 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Playfair Display'
   },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        grid {
-          overflow: none;
-        },
-        body {
-          overflow: none;
-        }
-      `,
-    },
-  },
 })
 
 ReactDOM.render(

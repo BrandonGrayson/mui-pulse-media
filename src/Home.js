@@ -1,12 +1,13 @@
-import { Box, Typography, Grid, Card, CardContent, CardHeader } from '@mui/material';
-import React from 'react';
+import { Box, Typography, Grid, Card, CardContent, CardHeader, Button, CardActions } from '@mui/material';
+import { React, useState } from 'react';
 import "./Home.css"
 
 export default function Home() {
+    const [showDialog, setShowDialog] = useState(false)
     return (
-        <Box id="top" sx={{ overflow: 'none' }}>
+        <>
             <Grid container spacing={2} id="container">
-                <Grid item xs={10} md={12} lg={3} sx={{ paddingLeft: "15vw" }} id="title">
+                <Grid item xs={10} md={12} lg={3} sx={{ marginLeft: "15vw" }} id="title">
                     <Typography
                         variant="h2"
                         width="bold"
@@ -37,13 +38,10 @@ export default function Home() {
                             className="hero-img"
                         />
                     </Box>
-
-
-
                 </Grid>
             </Grid>
 
-            {/* <Grid item xs={12} sm={8} display='flex' flexDirection="row" mt={5} className="about-box">
+            <Grid item xs={12} sm={8} display='flex' flexDirection="row" mt={5} className="about-box">
                 <Box className="bar"></Box>
                 <Typography id="about" sx={{ marginRight: '5vw', display: 'flex', alignItems: 'center' }}>
                     Pulse Media is a branding agency based in Mt Laurel, NJ.
@@ -51,39 +49,48 @@ export default function Home() {
                 </Typography>
             </Grid>
 
-            <Grid item xs={12} mt={3} display='flex' justifyContent='center'>
+            <Grid item xs={12} mt={3} pb={4} display='flex' justifyContent='center'>
                 <Typography id="what">
                     What We Do
                 </Typography>
-            </Grid> */}
-            {/* <Grid container >
-                <Grid item xs={12} md={4} className="card-group" >
+            </Grid>
+            <Grid container >
+                <Grid item xs={12} md={4} px={3} mb={2} className="card-group" >
                     <Card className="card">
                         <CardHeader title="Google Reviews" />
                         <CardContent>
                             <Typography>Generate Consistent Reviews </Typography>
                         </CardContent>
+                        <CardActions>
+                            <Button variant="contained" onClick={() => setShowDialog(true)} >Learn More</Button>
+                        </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={4} className="card-group" >
+                <Grid item xs={12} md={4} px={3} mb={2} className="card-group" >
                     <Card className="card">
-                        <CardHeader title="Google Reviews" />
+                        <CardHeader title="Social Media" />
                         <CardContent>
                             <Typography>Generate Consistent Reviews </Typography>
                         </CardContent>
+                        <CardActions>
+                            <Button variant="contained"  >Learn More</Button>
+                        </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={4} className="card-group" >
+                <Grid item xs={12} md={4} px={3} mb={2} className="card-group" >
                     <Card className="card">
-                        <CardHeader title="Google Reviews" />
+                        <CardHeader title="Web Development" />
                         <CardContent>
                             <Typography>Generate Consistent Reviews </Typography>
                         </CardContent>
+                        <CardActions>
+                            <Button variant="contained" >Learn More</Button>
+                        </CardActions>
                     </Card>
                 </Grid>
-            </Grid> */}
+            </Grid>
 
-        </Box>
+        </>
 
     )
 }

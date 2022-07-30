@@ -171,12 +171,11 @@
     }
 
     .card-group {
-        background-color: red;
-        /* display: flex;
-        justify-content: center; */
+        display: flex;
+        justify-content: center;
     }
 
     .card {
-        max-width: 300px;
+        width: 100%
     }
 }

@@ -8,12 +8,12 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Box id="app">
+    <>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
-    </Box>
+    </>
   );
 }
 
