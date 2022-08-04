@@ -1,9 +1,46 @@
-import { Box, Typography, Grid, Card, CardContent, CardHeader, Button, CardActions } from '@mui/material';
-import { React, useState } from 'react';
+import {
+    Box,
+    Typography,
+    Grid,
+    Card,
+    CardContent,
+    CardHeader,
+    Button,
+    CardActions,
+    Dialog,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    FormGroup,
+    FormControlLabel,
+    Checkbox
+} from '@mui/material';
+import { useState } from 'react';
+import React from 'react'
 import "./Home.css"
 
 export default function Home() {
-    const [showDialog, setShowDialog] = useState(false)
+    const [open, setOpen] = useState(false)
+    const [services, setServices] = useState([])
+
+    const handleClick = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(true)
+    }
+
+    const checkService = (event) => {
+        console.log(event.target.value)
+        let checkedService = event.target.value
+        if (services.indexOf(checkedService) === -1) {
+            setServices([...services, checkedService])
+        } else {
+            services.filter((service) => service === checkedService)
+        }
+    }
+
     return (
         <>
             <Grid container spacing={2} id="container">
@@ -62,7 +99,7 @@ export default function Home() {
                             <Typography>Generate Consistent Reviews </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained" onClick={() => setShowDialog(true)} >Learn More</Button>
+                            <Button variant="contained" onClick={handleClick} >Learn More</Button>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -89,7 +126,19 @@ export default function Home() {
                     </Card>
                 </Grid>
             </Grid>
-
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Service</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        To get a free guide fill out this form
+                    </DialogContentText>
+                    <FormGroup>
+                        <FormControlLabel value="Google" control={<Checkbox checked={services.includes("Google")} onChange={checkService} />} label="Google" />
+                        <FormControlLabel value="Social Media" control={<Checkbox checked={services.includes("Social Media")} />} onChange={checkService} label="Social Media" />
+                        <FormControlLabel value="Web Development" control={<Checkbox checked={services.includes("Web Development")} />} onChange={checkService} label="Web Development" />
+                    </FormGroup>
+                </DialogContent>
+            </Dialog>
         </>
 
     )
