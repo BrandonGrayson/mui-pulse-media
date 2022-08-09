@@ -13,16 +13,20 @@ import {
     DialogTitle,
     FormGroup,
     FormControlLabel,
-    Checkbox
+    Checkbox,
+    TextField,
+    FormControl
 } from '@mui/material';
 import { useState } from 'react';
 import React from 'react'
 import "./Home.css"
+import axios from 'axios';
 
 export default function Home() {
     const [open, setOpen] = useState(false)
-    const [services, setServices] = useState([])
-
+    // const [services, setServices] = useState([])
+    const [user, setUser] = useState({ firstName: "", lastName: "", email: "", services: [] })
+    const [defaultChecked, setDefaultChecked] = useState(false)
     const handleClick = () => {
         setOpen(true)
     }
@@ -32,14 +36,43 @@ export default function Home() {
     }
 
     const checkService = (event) => {
-        console.log(event.target.value)
+
         let checkedService = event.target.value
-        if (services.indexOf(checkedService) === -1) {
-            setServices([...services, checkedService])
+
+        if (user.services.indexOf(checkedService) === -1) {
+            setUser({
+                ...user,
+                services: [...user.services, checkedService]
+            })
         } else {
-            services.filter((service) => service === checkedService)
+            setUser({
+                ...user,
+                services: [user.services.filter((service) => service === checkedService)]
+            })
+            // user.services.filter((service) => service === checkedService)
         }
     }
+
+    const handleSubmit = async () => {
+        // axios.post("http://127.0.0.1:8000/service", JSON.stringify(user))'
+        const response = await fetch("http://127.0.0.1:8000/service", {
+            method: "Post",
+            mode: "cors",
+            credentials: 'include',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user)
+        })
+        response.json().then((response) => {
+            if (response.status === "ok") {
+                alert("Service added successfully")
+            } else {
+                alert("Error adding product")
+            }
+        })
+            .catch((error) => console.log(error))
+    }
+
+    console.log('user services', user.services)
 
     return (
         <>
@@ -133,10 +166,25 @@ export default function Home() {
                         To get a free guide fill out this form
                     </DialogContentText>
                     <FormGroup>
-                        <FormControlLabel value="Google" control={<Checkbox checked={services.includes("Google")} onChange={checkService} />} label="Google" />
-                        <FormControlLabel value="Social Media" control={<Checkbox checked={services.includes("Social Media")} />} onChange={checkService} label="Social Media" />
-                        <FormControlLabel value="Web Development" control={<Checkbox checked={services.includes("Web Development")} />} onChange={checkService} label="Web Development" />
+                        <FormControlLabel value="Google" control={<Checkbox checked={user.services.includes("Google")} onChange={checkService} />} label="Google" />
+                        <FormControlLabel value="Social Media" control={<Checkbox checked={user.services.includes("Social Media")} />} onChange={checkService} label="Social Media" />
+                        <FormControlLabel value="Web Development" control={<Checkbox checked={user.services.includes("Web Development")} />} onChange={checkService} label="Web Development" />
                     </FormGroup>
+                    <FormControl>
+                        <TextField label="First Name" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })} />
+
+                    </FormControl>
+                    <FormControl>
+                        <TextField label="Last Name" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })} />
+
+                    </FormControl>
+                    <FormControl>
+                        <TextField label="Email" value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
+
+                    </FormControl>
+                    <FormControl>
+                        <Button onClick={handleSubmit} variant="contained">Submit</Button>
+                    </FormControl>
                 </DialogContent>
             </Dialog>
         </>
