@@ -51,6 +51,7 @@ export default function Home() {
             })
             // user.services.filter((service) => service === checkedService)
         }
+
     }
 
     const handleSubmit = async () => {
@@ -62,14 +63,29 @@ export default function Home() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(user)
         })
-        response.json().then((response) => {
-            if (response.status === "ok") {
-                alert("Service added successfully")
-            } else {
-                alert("Error adding product")
-            }
+        // .then(response => response.json())
+        // .then((response) => {
+        //     if (response.status === 201) {
+        //         console.log('response', response)
+        //         alert("Service added successfully")
+        //     } else {
+        //         console.log('response', response)
+        //         alert("Error adding product")
+        //     }
+        // }).catch((error) => console.log(error))
+        if (response.status === 201) {
+            console.log('response', response)
+            alert("Service added successfully")
+        } else {
+            console.log('response', response)
+            alert("Error adding product")
+        }
+        setUser({
+            firstName: '',
+            lastName: '',
+            email: '',
+            services: []
         })
-            .catch((error) => console.log(error))
     }
 
     console.log('user services', user.services)
