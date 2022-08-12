@@ -1,0 +1,181 @@
+#title {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#header {
+    font-size: 58px;
+    line-height: 48px;
+}
+
+#sub-header {
+    font-size: 40px;
+}
+
+.bar {
+    width: 6px;
+    background-color: #24307D;
+    height: 104px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 10px;
+}
+
+#what {
+    font-size: 32px;
+    font-weight: 700px !important;
+}
+
+#container {
+    overflow: none;
+}
+
+.hero-img {
+    /* max-width: 600px;
+    max-height: 420px; */
+    /* width: 200px;
+    height: 200px; */
+    width: 100%
+    
+}
+
+@media (max-width: 1250px) {
+    #header {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    #title {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .bar {
+        width: 6px;
+        background-color: #24307D;
+        height: 104px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10px;
+    }
+
+    #sub-header {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 999px) {
+    #container {
+        display: flex; 
+        flex-direction: column-reverse;
+    }
+
+    #header {
+        font-size: 38px;
+        line-height: 48px;
+        margin-top: 5vh;
+    }
+
+    #sub-header {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .hero-img {
+        /* max-width: 600px;
+        max-height: 420px; */
+        /* width: 200px;
+        height: 200px; */
+        width: 100%;
+        
+    }
+
+    .about {
+        margin-top: 20px;
+    }
+
+    .bar {
+        width: 6px;
+        background-color: #24307D;
+        height: 104px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        display: flex; 
+        flex-direction: column-reverse;
+        /* max-width: 370px; */
+        overflow: none;
+    }
+
+    .hero-img {
+        /* max-width: 480px; */
+        /* height: auto;
+        width: 250px; */
+      width: 100%
+    }
+
+    #header {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    #sub-header {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    #about {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .bar {
+        width: 6px;
+        background-color: #24307D;
+        height: 140px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10px;
+    }
+
+    .right-bar {
+        width: 40px;
+        background-color: #24307D;
+        height: 4px;
+    }
+
+    #services {
+        margin-left: 80px
+    }
+
+    #social {
+        font-size: 60px;
+        margin-left: 10px;
+    }
+
+    #what {
+        font-size: 26px;
+        font-weight: 700px !important;
+        margin-top: 40px;
+        margin-bottom: 10px
+    }
+
+    .head-fmt {
+        margin-left: 20px;
+    }
+
+    .card-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%
+    }
+}

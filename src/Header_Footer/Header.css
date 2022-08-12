@@ -1,0 +1,24 @@
+.navbar {
+    height: 60px;
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 50px;
+        width: 100%;
+        overflow: none;
+    }
+}
+
+/* @media (max-width: 768px) {
+    .navbar {
+        height: 60px
+    }
+} */
+
+@media (max-width: 990px) {
+    .navbar {
+        height: 60px
+    }
+}
+
