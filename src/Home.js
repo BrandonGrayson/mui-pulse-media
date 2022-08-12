@@ -20,13 +20,13 @@ import {
 import { useState } from 'react';
 import React from 'react'
 import "./Home.css"
-import axios from 'axios';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 export default function Home() {
     const [open, setOpen] = useState(false)
     // const [services, setServices] = useState([])
     const [user, setUser] = useState({ firstName: "", lastName: "", email: "", services: [] })
-    const [defaultChecked, setDefaultChecked] = useState(false)
     const handleClick = () => {
         setOpen(true)
     }
@@ -63,21 +63,9 @@ export default function Home() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(user)
         })
-        // .then(response => response.json())
-        // .then((response) => {
-        //     if (response.status === 201) {
-        //         console.log('response', response)
-        //         alert("Service added successfully")
-        //     } else {
-        //         console.log('response', response)
-        //         alert("Error adding product")
-        //     }
-        // }).catch((error) => console.log(error))
         if (response.status === 201) {
-            console.log('response', response)
             alert("Service added successfully")
         } else {
-            console.log('response', response)
             alert("Error adding product")
         }
         setUser({
@@ -87,8 +75,6 @@ export default function Home() {
             services: []
         })
     }
-
-    console.log('user services', user.services)
 
     return (
         <>
@@ -177,6 +163,7 @@ export default function Home() {
             </Grid>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Service</DialogTitle>
+                <CloseIcon />
                 <DialogContent>
                     <DialogContentText>
                         To get a free guide fill out this form
