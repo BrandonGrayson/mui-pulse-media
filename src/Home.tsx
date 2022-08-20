@@ -22,10 +22,17 @@ import React from "react";
 import "./Home.css";
 import CloseIcon from "@mui/icons-material/Close";
 
+interface User {
+  firstName: string;
+  lastName: string;
+  email: string;
+  services: string[];
+}
+
 export default function Home() {
   const [open, setOpen] = useState(false);
   // const [services, setServices] = useState([])
-  const [user, setUser] = useState({
+  const [user, setUser] = useState<User>({
     firstName: "",
     lastName: "",
     email: "",
@@ -39,8 +46,9 @@ export default function Home() {
     setOpen(true);
   };
 
-  const checkService = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let checkedService: string = event.target.value;
+  const checkService = (event: React.SyntheticEvent<Element, Event>) => {
+    console.log("event", event);
+    let checkedService = (event.target as unknown as HTMLInputElement).value;
 
     if (user.services.indexOf(checkedService) === -1) {
       setUser({
@@ -51,10 +59,11 @@ export default function Home() {
       setUser({
         ...user,
         services: [
-          user.services.filter((service) => service === checkedService),
+          user.services.filter(
+            (service) => service === checkedService
+          ) as unknown as string,
         ],
       });
-      // user.services.filter((service) => service === checkedService)
     }
   };
 
