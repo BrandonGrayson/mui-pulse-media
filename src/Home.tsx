@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   const handleClose = () => {
-    setOpen(true);
+    setOpen(!open);
   };
 
   const checkService = (event: React.SyntheticEvent<Element, Event>) => {
@@ -203,8 +203,13 @@ export default function Home() {
         </Grid>
       </Grid>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Service</DialogTitle>
-        <CloseIcon />
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <DialogTitle>Service</DialogTitle>
+          <CloseIcon
+            onClick={handleClose}
+            sx={{ marginTop: "10px", marginRight: "30px" }}
+          />
+        </Box>
         <DialogContent>
           <DialogContentText>
             To get a free guide fill out this form
