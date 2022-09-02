@@ -186,7 +186,9 @@ export default function Home() {
               <Typography>Generate Consistent Reviews </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained">Learn More</Button>
+              <Button variant="contained" onClick={handleClick}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -197,7 +199,9 @@ export default function Home() {
               <Typography>Generate Consistent Reviews </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained">Learn More</Button>
+              <Button variant="contained" onClick={handleClick}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         </Grid>
