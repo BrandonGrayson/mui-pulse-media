@@ -21,13 +21,7 @@ import { useState } from "react";
 import React from "react";
 import "./Home.css";
 import CloseIcon from "@mui/icons-material/Close";
-
-interface User {
-  firstName: string;
-  lastName: string;
-  email: string;
-  services: string[];
-}
+import { User, Service } from "./schemas/interfaces";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -36,8 +30,14 @@ export default function Home() {
     firstName: "",
     lastName: "",
     email: "",
-    services: [],
+    // services: [],
   });
+  const [services, setServices] = useState<Service>({
+    google: false,
+    web_development: false,
+    social_media: false,
+  });
+
   const handleClick = () => {
     setOpen(true);
   };
@@ -50,21 +50,21 @@ export default function Home() {
     console.log("event", event);
     let checkedService = (event.target as unknown as HTMLInputElement).value;
 
-    if (user.services.indexOf(checkedService) === -1) {
-      setUser({
-        ...user,
-        services: [...user.services, checkedService],
-      });
-    } else {
-      setUser({
-        ...user,
-        services: [
-          user.services.filter(
-            (service) => service === checkedService
-          ) as unknown as string,
-        ],
-      });
-    }
+    // if (user.services.indexOf(checkedService) === -1) {
+    //   setUser({
+    //     ...user,
+    //     services: [...user.services, checkedService],
+    //   });
+    // } else {
+    //   setUser({
+    //     ...user,
+    //     services: [
+    //       user.services.filter(
+    //         (service) => service === checkedService
+    //       ) as unknown as string,
+    //     ],
+    //   });
+    // }
   };
 
   const handleSubmit = async () => {
@@ -85,7 +85,6 @@ export default function Home() {
       firstName: "",
       lastName: "",
       email: "",
-      services: [],
     });
   };
 
@@ -223,7 +222,7 @@ export default function Home() {
               value="Google"
               control={
                 <Checkbox
-                  checked={user.services.includes("Google")}
+                  // checked={user.services.includes("Google")}
                   onChange={checkService}
                 />
               }
@@ -232,7 +231,9 @@ export default function Home() {
             <FormControlLabel
               value="Social Media"
               control={
-                <Checkbox checked={user.services.includes("Social Media")} />
+                <Checkbox
+                // checked={user.services.includes("Social Media")}
+                />
               }
               onChange={checkService}
               label="Social Media"
@@ -240,7 +241,9 @@ export default function Home() {
             <FormControlLabel
               value="Web Development"
               control={
-                <Checkbox checked={user.services.includes("Web Development")} />
+                <Checkbox
+                // checked={user.services.includes("Web Development")}
+                />
               }
               onChange={checkService}
               label="Web Development"
