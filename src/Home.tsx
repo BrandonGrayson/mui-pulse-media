@@ -30,7 +30,6 @@ export default function Home() {
     firstName: "",
     lastName: "",
     email: "",
-    // services: [],
   });
   const [services, setServices] = useState<Service>({
     google: false,
@@ -48,27 +47,27 @@ export default function Home() {
 
   const checkService = (event: React.SyntheticEvent<Element, Event>) => {
     console.log("event", event);
-    let checkedService = (event.target as unknown as HTMLInputElement).value;
+    let value = (event.target as unknown as HTMLInputElement).value;
 
-    // if (user.services.indexOf(checkedService) === -1) {
-    //   setUser({
-    //     ...user,
-    //     services: [...user.services, checkedService],
-    //   });
-    // } else {
-    //   setUser({
-    //     ...user,
-    //     services: [
-    //       user.services.filter(
-    //         (service) => service === checkedService
-    //       ) as unknown as string,
-    //     ],
-    //   });
-    // }
+    if (value === "google") {
+      setServices({
+        ...services,
+        google: !services.google,
+      });
+    } else if (value === "social media") {
+      setServices({
+        ...services,
+        social_media: !services.social_media,
+      });
+    } else if (value === "web development") {
+      setServices({
+        ...services,
+        web_development: !services.web_development,
+      });
+    }
   };
 
   const handleSubmit = async () => {
-    // axios.post("http://127.0.0.1:8000/service", JSON.stringify(user))'
     const response = await fetch("http://127.0.0.1:8000/service", {
       method: "Post",
       mode: "cors",
@@ -87,6 +86,7 @@ export default function Home() {
       email: "",
     });
   };
+  console.log({ user: user, services: services });
 
   return (
     <>
@@ -219,32 +219,21 @@ export default function Home() {
           </DialogContentText>
           <FormGroup>
             <FormControlLabel
-              value="Google"
+              value="google"
               control={
-                <Checkbox
-                  // checked={user.services.includes("Google")}
-                  onChange={checkService}
-                />
+                <Checkbox checked={services.google} onChange={checkService} />
               }
               label="Google"
             />
             <FormControlLabel
-              value="Social Media"
-              control={
-                <Checkbox
-                // checked={user.services.includes("Social Media")}
-                />
-              }
+              value="social media"
+              control={<Checkbox checked={services.social_media} />}
               onChange={checkService}
               label="Social Media"
             />
             <FormControlLabel
-              value="Web Development"
-              control={
-                <Checkbox
-                // checked={user.services.includes("Web Development")}
-                />
-              }
+              value="web development"
+              control={<Checkbox checked={services.web_development} />}
               onChange={checkService}
               label="Web Development"
             />
