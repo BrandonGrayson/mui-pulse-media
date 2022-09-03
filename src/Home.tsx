@@ -25,7 +25,6 @@ import { User, Service } from "./schemas/interfaces";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  // const [services, setServices] = useState([])
   const [user, setUser] = useState<User>({
     firstName: "",
     lastName: "",
@@ -73,7 +72,7 @@ export default function Home() {
       mode: "cors",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
+      body: JSON.stringify({ user: user, services: services }),
     });
     if (response.status === 201) {
       alert("Service added successfully");
