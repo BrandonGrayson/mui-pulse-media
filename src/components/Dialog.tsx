@@ -10,10 +10,11 @@ import {
   Checkbox,
   TextField,
   FormControl,
+  DialogActions,
 } from "@mui/material";
 import React, { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
 import { User, Service } from "../schemas/interfaces";
+
 export default function SignUpUserDialog({
   open,
   setOpen,
@@ -82,10 +83,6 @@ export default function SignUpUserDialog({
     <Dialog open={open} onClose={handleClose}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <DialogTitle>Service</DialogTitle>
-        <CloseIcon
-          onClick={handleClose}
-          sx={{ marginTop: "10px", marginRight: "30px" }}
-        />
       </Box>
       <DialogContent>
         <DialogContentText>
@@ -112,33 +109,41 @@ export default function SignUpUserDialog({
             label="Web Development"
           />
         </FormGroup>
-        <FormControl>
-          <TextField
-            label="First Name"
-            value={user.firstName}
-            onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-          />
-        </FormControl>
-        <FormControl>
-          <TextField
-            label="Last Name"
-            value={user.lastName}
-            onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-          />
-        </FormControl>
-        <FormControl>
-          <TextField
-            label="Email"
-            value={user.email}
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
-          />
-        </FormControl>
-        <FormControl>
-          <Button onClick={handleSubmit} variant="contained">
-            Submit
-          </Button>
-        </FormControl>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <FormControl>
+            <TextField
+              required
+              label="First Name"
+              value={user.firstName}
+              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+              sx={{ marginBottom: "10px" }}
+            />
+          </FormControl>
+          <FormControl>
+            <TextField
+              required
+              label="Last Name"
+              value={user.lastName}
+              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+              sx={{ marginBottom: "10px" }}
+            />
+          </FormControl>
+          <FormControl>
+            <TextField
+              required
+              label="Email"
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+            />
+          </FormControl>
+        </Box>
       </DialogContent>
+      <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Button onClick={handleClose}>Cancel</Button>
+        <Button onClick={handleSubmit} variant="contained">
+          Submit
+        </Button>
+      </DialogActions>
     </Dialog>
   );
 }
