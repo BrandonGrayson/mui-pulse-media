@@ -80,7 +80,7 @@ export default function SignUpUserDialog({
   };
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} maxWidth="lg">
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <DialogTitle>Service</DialogTitle>
       </Box>
