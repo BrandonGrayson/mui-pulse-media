@@ -7,86 +7,16 @@ import {
   CardHeader,
   Button,
   CardActions,
-  Dialog,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  FormGroup,
-  FormControlLabel,
-  Checkbox,
-  TextField,
-  FormControl,
 } from "@mui/material";
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
+import SignUpUserDialog from "./components/Dialog";
 import "./Home.css";
-import CloseIcon from "@mui/icons-material/Close";
-
-interface User {
-  firstName: string;
-  lastName: string;
-  email: string;
-  services: string[];
-}
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  // const [services, setServices] = useState([])
-  const [user, setUser] = useState<User>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    services: [],
-  });
+
   const handleClick = () => {
     setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(!open);
-  };
-
-  const checkService = (event: React.SyntheticEvent<Element, Event>) => {
-    console.log("event", event);
-    let checkedService = (event.target as unknown as HTMLInputElement).value;
-
-    if (user.services.indexOf(checkedService) === -1) {
-      setUser({
-        ...user,
-        services: [...user.services, checkedService],
-      });
-    } else {
-      setUser({
-        ...user,
-        services: [
-          user.services.filter(
-            (service) => service === checkedService
-          ) as unknown as string,
-        ],
-      });
-    }
-  };
-
-  const handleSubmit = async () => {
-    // axios.post("http://127.0.0.1:8000/service", JSON.stringify(user))'
-    const response = await fetch("http://127.0.0.1:8000/service", {
-      method: "Post",
-      mode: "cors",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
-    if (response.status === 201) {
-      alert("Service added successfully");
-    } else {
-      alert("Error adding product");
-    }
-    setUser({
-      firstName: "",
-      lastName: "",
-      email: "",
-      services: [],
-    });
   };
 
   return (
@@ -186,7 +116,9 @@ export default function Home() {
               <Typography>Generate Consistent Reviews </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained">Learn More</Button>
+              <Button variant="contained" onClick={handleClick}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -197,79 +129,14 @@ export default function Home() {
               <Typography>Generate Consistent Reviews </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained">Learn More</Button>
+              <Button variant="contained" onClick={handleClick}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         </Grid>
       </Grid>
-      <Dialog open={open} onClose={handleClose}>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <DialogTitle>Service</DialogTitle>
-          <CloseIcon
-            onClick={handleClose}
-            sx={{ marginTop: "10px", marginRight: "30px" }}
-          />
-        </Box>
-        <DialogContent>
-          <DialogContentText>
-            To get a free guide fill out this form
-          </DialogContentText>
-          <FormGroup>
-            <FormControlLabel
-              value="Google"
-              control={
-                <Checkbox
-                  checked={user.services.includes("Google")}
-                  onChange={checkService}
-                />
-              }
-              label="Google"
-            />
-            <FormControlLabel
-              value="Social Media"
-              control={
-                <Checkbox checked={user.services.includes("Social Media")} />
-              }
-              onChange={checkService}
-              label="Social Media"
-            />
-            <FormControlLabel
-              value="Web Development"
-              control={
-                <Checkbox checked={user.services.includes("Web Development")} />
-              }
-              onChange={checkService}
-              label="Web Development"
-            />
-          </FormGroup>
-          <FormControl>
-            <TextField
-              label="First Name"
-              value={user.firstName}
-              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-            />
-          </FormControl>
-          <FormControl>
-            <TextField
-              label="Last Name"
-              value={user.lastName}
-              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-            />
-          </FormControl>
-          <FormControl>
-            <TextField
-              label="Email"
-              value={user.email}
-              onChange={(e) => setUser({ ...user, email: e.target.value })}
-            />
-          </FormControl>
-          <FormControl>
-            <Button onClick={handleSubmit} variant="contained">
-              Submit
-            </Button>
-          </FormControl>
-        </DialogContent>
-      </Dialog>
+      <SignUpUserDialog open={open} setOpen={setOpen} />
     </>
   );
 }
